@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <input type="checkbox" name="status" id="status" />
+
+      <label for="status" class="toggle">
+        <svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 24 24"
+          height="18px"
+          width="18px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path fill="none" d="M0 0h24v24H0V0z"></path>
+          <path d="M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z"></path>
+        </svg>
+      </label>
+      <header class="header">
+        <img
+          src="https://cdn3d.iconscout.com/3d/premium/thumb/code-11383903-9167102.png"
+          alt=""
+        />
+        <div class="hidden">@frontend_mister</div>
+      </header>
+      <form class="search">
+        <label for="status" class="icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+        <input type="search" />
+      </form>
+      <nav class="menu">
+        <a class="active" href="#">
+          <span>
+            <i title="Dashboard" class="fa-solid fa-table-columns"></i
+          ></span>
+          <div class="hidden">Dashboard</div>
+        </a>
+        <a href="#">
+          <span>
+            <i title="Market Overview" class="fa-solid fa-chart-simple"></i
+          ></span>
+          <div class="hidden">Market Overview</div>
+        </a>
+        <a href="#">
+          <span> <i title="Industries" class="fa-solid fa-industry"></i></span>
+          <div class="hidden">Industries</div>
+        </a>
+        <a href="#">
+          <span>
+            <i title="Analytics" class="fa-solid fa-money-bill-trend-up"></i
+          ></span>
+          <div class="hidden">Analytics</div>
+        </a>
+        <a href="#">
+          <span> <i title="Report" class="fa-regular fa-flag"></i></span>
+          <div class="hidden">Report</div>
+        </a>
+        <a href="#">
+          <span> <i title="Notifications" class="fa-regular fa-bell"></i></span>
+          <div class="hidden">Notifications</div>
+        </a>
+        <a href="#">
+          <span> <i title="Settings" class="fa-solid fa-gear"></i></span>
+          <div class="hidden">Settings</div>
+        </a>
+      </nav>
+    </aside>
+  </body>
+</html>

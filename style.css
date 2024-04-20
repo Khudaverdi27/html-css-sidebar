@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  text-decoration: none;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+body {
+  padding: 10px;
+}
+
+.sidebar {
+  width: 300px;
+  height: 100%;
+  background-color: #111;
+  border-radius: 14px;
+  padding: 0 14px;
+  color: #fff;
+  position: relative;
+  transition: 230ms width;
+
+  .hidden {
+    opacity: 1;
+    visibility: visible;
+    white-space: nowrap;
+    transition: 230ms opacity 230ms visibility;
+  }
+  .toggle {
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #289df7;
+    position: absolute;
+    top: 16px;
+    left: 100%;
+    translate: -50%;
+    svg {
+      rotate: 180deg;
+      transition: 230ms rotate;
+    }
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    padding: 14px 0;
+    font-weight: 600;
+    font-size: 18px;
+    gap: 10px;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+  .search {
+    position: relative;
+    input {
+      width: 100%;
+      height: 40px;
+      background-color: rgb(100, 99, 99);
+      border-radius: 4px;
+      outline: none;
+      color: #fff;
+      padding: 0 12px 0 40px;
+      font-size: 16px;
+    }
+    .icon {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  i {
+    font-size: 20px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  span i {
+    position: relative;
+    &::after {
+      content: attr(title);
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      translate: 20px -50%;
+      padding: 3px 12px;
+      border-radius: 4px;
+      background-color: #111;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      white-space: nowrap;
+      transition: 230ms opacity;
+    }
+  }
+  .menu {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    a {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      border-radius: 4px;
+      color: #fff;
+      gap: 15px;
+      padding: 0 12px;
+      &:where(:hover, .active) {
+        background-color: #3d3c3c;
+      }
+    }
+  }
+
+  &:has(input[name="status"]:checked) {
+    width: 75px;
+    .toggle svg {
+      rotate: 0deg;
+    }
+    .hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .search input {
+      padding-right: 0;
+    }
+    span i:hover::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
